@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E83796F3-9932-4DE3-83CC-F46416991CA9}</ProjectGuid>
+    <RootNamespace>tyclient</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="simple_handler.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="simple_handler_win.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="tyclient.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\cef_app.h" />
+    <ClInclude Include="include\cef_auth_callback.h" />
+    <ClInclude Include="include\cef_base.h" />
+    <ClInclude Include="include\cef_browser.h" />
+    <ClInclude Include="include\cef_browser_process_handler.h" />
+    <ClInclude Include="include\cef_callback.h" />
+    <ClInclude Include="include\cef_client.h" />
+    <ClInclude Include="include\cef_command_line.h" />
+    <ClInclude Include="include\cef_context_menu_handler.h" />
+    <ClInclude Include="include\cef_cookie.h" />
+    <ClInclude Include="include\cef_dialog_handler.h" />
+    <ClInclude Include="include\cef_display_handler.h" />
+    <ClInclude Include="include\cef_dom.h" />
+    <ClInclude Include="include\cef_download_handler.h" />
+    <ClInclude Include="include\cef_download_item.h" />
+    <ClInclude Include="include\cef_drag_data.h" />
+    <ClInclude Include="include\cef_drag_handler.h" />
+    <ClInclude Include="include\cef_find_handler.h" />
+    <ClInclude Include="include\cef_focus_handler.h" />
+    <ClInclude Include="include\cef_frame.h" />
+    <ClInclude Include="include\cef_geolocation.h" />
+    <ClInclude Include="include\cef_geolocation_handler.h" />
+    <ClInclude Include="include\cef_jsdialog_handler.h" />
+    <ClInclude Include="include\cef_keyboard_handler.h" />
+    <ClInclude Include="include\cef_life_span_handler.h" />
+    <ClInclude Include="include\cef_load_handler.h" />
+    <ClInclude Include="include\cef_menu_model.h" />
+    <ClInclude Include="include\cef_navigation_entry.h" />
+    <ClInclude Include="include\cef_origin_whitelist.h" />
+    <ClInclude Include="include\cef_pack_resources.h" />
+    <ClInclude Include="include\cef_pack_strings.h" />
+    <ClInclude Include="include\cef_parser.h" />
+    <ClInclude Include="include\cef_path_util.h" />
+    <ClInclude Include="include\cef_print_handler.h" />
+    <ClInclude Include="include\cef_print_settings.h" />
+    <ClInclude Include="include\cef_process_message.h" />
+    <ClInclude Include="include\cef_process_util.h" />
+    <ClInclude Include="include\cef_render_handler.h" />
+    <ClInclude Include="include\cef_render_process_handler.h" />
+    <ClInclude Include="include\cef_request.h" />
+    <ClInclude Include="include\cef_request_context.h" />
+    <ClInclude Include="include\cef_request_context_handler.h" />
+    <ClInclude Include="include\cef_request_handler.h" />
+    <ClInclude Include="include\cef_resource_bundle.h" />
+    <ClInclude Include="include\cef_resource_bundle_handler.h" />
+    <ClInclude Include="include\cef_resource_handler.h" />
+    <ClInclude Include="include\cef_response.h" />
+    <ClInclude Include="include\cef_response_filter.h" />
+    <ClInclude Include="include\cef_runnable.h" />
+    <ClInclude Include="include\cef_sandbox_win.h" />
+    <ClInclude Include="include\cef_scheme.h" />
+    <ClInclude Include="include\cef_ssl_info.h" />
+    <ClInclude Include="include\cef_stream.h" />
+    <ClInclude Include="include\cef_string_visitor.h" />
+    <ClInclude Include="include\cef_task.h" />
+    <ClInclude Include="include\cef_trace.h" />
+    <ClInclude Include="include\cef_urlrequest.h" />
+    <ClInclude Include="include\cef_v8.h" />
+    <ClInclude Include="include\cef_values.h" />
+    <ClInclude Include="include\cef_version.h" />
+    <ClInclude Include="include\cef_web_plugin.h" />
+    <ClInclude Include="include\cef_xml_reader.h" />
+    <ClInclude Include="include\cef_zip_reader.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="simple_app.h" />
+    <ClInclude Include="simple_context_handler.h" />
+    <ClInclude Include="simple_handler.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="tyclient.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico" />
+    <Image Include="tyclient.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tyclient.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
